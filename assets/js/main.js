@@ -80,23 +80,6 @@ $('[data-line]').each(function(){
 })
 
 
-// skill
-gsap.set('.sc-skill .line-colum',{height:0})
-gsap.set('.sc-skill .line-row',{width:0})
-
-lineWt2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.sc-skill',
-    start: "0% 0%",
-    end: "100% 100%",
-  },
-  
-})
-lineWt2.to('.sc-skill .line-colum',{ height:800},'a')
-lineWt2.to('.sc-skill .line-row',{ width:1775},'a')
-
-
-
 
 //sc-info
 gsap.set('#About .sc-info .txt',{ xPercent:50,stagger:0.1},)
@@ -110,22 +93,6 @@ worKmv = gsap.timeline({
 })
 
 worKmv.to('#About .sc-info .txt',{ xPercent:-30,stagger:0.1},)
-// clinets
-gsap.set('.sc-clients .line-colum',{height:0})
-gsap.set('.sc-clients .line-row',{width:0})
-
-lineWtt = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.sc-clients',
-    start: "0% 0%",
-    end: "100% 100%",
-  },
-  
-})
-lineWtt.to('.sc-clients .line-colum',{ height:800},'a')
-lineWtt.to('.sc-clients .line-row',{ width:2000},'a')
-
-
 
 // projects
 gsap.set('.sc-project .item-link img',{scale:1.5, stagger:0.1})
