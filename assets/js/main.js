@@ -177,8 +177,8 @@ hovMotion = gsap.timeline({
 
 
 hovMotion
-.set('.sc-project .item .btn',{ scale:0, opecity:0})
-.to('.sc-project .item .btn',{ scale:1,opecity:1 })
+.set('.sc-project .item .btn',{ scale:0,rotation:360})
+.to('.sc-project .item .btn',{ scale:1,rotation:0 })
 
 $('.sc-project .item').mouseover(function () {
     m1=setTimeout(() => {

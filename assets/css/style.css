@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("../../../assets/font/SuisseIntl-Bold.woff2");
+@import url("../../../assets/font/SuisseIntl-Book.woff2");
 /* 
     @리셋을쓴이유
 
@@ -202,6 +204,7 @@ textarea::-webkit-outer-spin-button {
 body {
   color: #1e1e21;
   background: #f5f3ef;
+  font-family: "suisse";
 }
 
 .inner {
@@ -760,7 +763,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 .main-wrap .sc-main .bottom h3 {
   letter-spacing: -0.5px;
@@ -1046,7 +1049,7 @@ body {
   font-size: 2.75rem;
   font-weight: 600;
   line-height: 110%;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 .main-wrap .sc-skill .grid-box .right p {
   color: rgba(30, 30, 33, 0.7);
