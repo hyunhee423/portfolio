@@ -123,7 +123,7 @@ worKmv = gsap.timeline({
     trigger: '#About',
     start: "0% 50%",
     end: "100% end",
-    markers:true,
+    // markers:true,
     scrub:1,
   },
 })
