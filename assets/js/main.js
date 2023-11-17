@@ -80,20 +80,6 @@ $('[data-line]').each(function(){
 })
 
 
-
-lineWt = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.sc-about',
-    start: "0% 0%",
-    end: "100% 100%",
-  },
-  
-})
-
-lineWt.to('.sc-about .line-colum',{ height:800},'a')
-lineWt.to('.sc-about .line-row',{ width:2000},'a')
-
-
 // skill
 gsap.set('.sc-skill .line-colum',{height:0})
 gsap.set('.sc-skill .line-row',{width:0})
