@@ -60,7 +60,6 @@ descBg = gsap.timeline({
     start: "0% 100%",
     end: "100% 0%",
     scrub:0,
-    // markers:true,
   },
   
 })
@@ -74,7 +73,6 @@ $('[data-line]').each(function(){
       trigger: $(this),
       start: "0% 50%",
       end: "100% 100%",
-      // markers:true,
     },
     '--bar':'100%'
   })
@@ -88,7 +86,6 @@ lineWt = gsap.timeline({
     trigger: '.sc-about',
     start: "0% 0%",
     end: "100% 100%",
-    // markers:true,
   },
   
 })
@@ -106,7 +103,6 @@ lineWt2 = gsap.timeline({
     trigger: '.sc-skill',
     start: "0% 0%",
     end: "100% 100%",
-    // markers:true,
   },
   
 })
@@ -123,7 +119,6 @@ worKmv = gsap.timeline({
     trigger: '#About',
     start: "0% 50%",
     end: "100% end",
-    // markers:true,
     scrub:1,
   },
 })
@@ -138,7 +133,6 @@ lineWtt = gsap.timeline({
     trigger: '.sc-clients',
     start: "0% 0%",
     end: "100% 100%",
-    // markers:true,
   },
   
 })
@@ -156,7 +150,6 @@ descBg = gsap.timeline({
     start: "0% 0%",
     end: "100% 100%",
     scrub:1,
-    // markers:true,
   },
   
 })
