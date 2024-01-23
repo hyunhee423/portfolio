@@ -8,6 +8,10 @@ body {
     padding-left: 4rem;
     padding-right: 4rem;
     position: relative;
+    @include mobile{
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+    }
 }
 
 .inner-wrap {
@@ -79,6 +83,10 @@ body {
     text-decoration: none;
     transition: border-color .2s,color .2s,background-color .2s;
     overflow: hidden;
+    @include mobile{
+        padding:1rem;
+         border: none;
+    }
     &.white{
         display: inline-block;
         backdrop-filter: none;
@@ -90,6 +98,9 @@ body {
         font-weight: normal;
         .btn-inner{
             height: 18px;
+            @include mobile{
+                font-size: 1rem;
+            }
         }
         span{
             line-height: 1.2rem;            

@@ -16,7 +16,9 @@
         content="강렬한 비쥬얼과 순발력 있는 사용자 경험으로 웹을 통해 이야기를 펼치고, 더 나은 디지털 세상을 만들어가기 위해 노력하고 있습니다." />
     <!-- <meta property="og:image" content="/images/home_background.jpg"/> -->
     <meta property="og:site_name" content="웹퍼블리셔 현희의 포트폴리오" />
+
     <title>⋆ ℌ𝔶𝔲𝔫𝔥𝔢𝔢'𝔰 𝔓𝔬𝔯𝔱𝔣𝔬𝔩𝔦𝔬 ⋆ </title>
+    
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- favicon -->
@@ -25,7 +27,7 @@
 
     <!-- js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>    
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -70,7 +72,7 @@
                         </path>
                     </svg></span></button>
             <ul class="nav-menu">
-                <li class="menu-item"><a href="">
+                <li class="menu-item"><a href="#sc-main" class="scroll">
                         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -83,33 +85,7 @@
                             <span>HOME</span>
                         </div>
                     </a></li>
-                <li class="menu-item"><a href="">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
-                                </path>
-                            </svg>
-                        </span>
-                        <div class="menu-txt">
-                            <span>WORK</span>
-                            <span>WORK</span>
-                        </div>
-                    </a></li>
-                <li class="menu-item"><a href="">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
-                                </path>
-                            </svg>
-                        </span>
-                        <div class="menu-txt">
-                            <span>BLOG</span>
-                            <span>BLOG</span>
-                        </div>
-                    </a></li>
-                <li class="menu-item"><a href="">
+                <li class="menu-item"><a href="#About" class="scroll">
                         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -122,7 +98,21 @@
                             <span>ABOUT</span>
                         </div>
                     </a></li>
-                <li class="menu-item"><a href="">
+                <li class="menu-item"><a href="#sc-project" class="scroll">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <div class="menu-txt">
+                            <span>WORK</span>
+                            <span>WORK</span>
+                        </div>
+                    </a></li>
+             
+                <li class="menu-item"><a href="#sc-connect" class="scroll">
                         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -145,14 +135,14 @@
     </header>
 
     <main class="main-wrap">
-        <section class="sc-main">
+        <section id="sc-main">
             <div class="inner">
                 <h1 class="main-title">
                     Growth-Oriented<br>
                     Web Publisher</h1>
                 <div class="bottom">
                     <h3>(Seoul, South Korea)</h3>
-                    <a href="" class="btn-hov scroll-down">
+                    <a href="#About" class="btn-hov scroll-down scroll">
                         <span class="icon">
                             <svg class="before" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 24 24">
@@ -171,7 +161,7 @@
                 </div>
             </div>
         </section>
-        <section class="sc-visual">
+        <section id="sc-visual">
             <div class="img-area">
                 <img src="https://www.elliottlabs.co/_next/image?url=%2Felliott-3.jpg&w=3840&q=75" alt="">
             </div>
@@ -273,10 +263,7 @@
                 </div>
             </section>
         </section>
-
-
-
-        <section class="sc-project">
+        <section id="sc-project">
             <div class="list">
                 <div class="item">
                     <a href="https://hyunhee423.github.io/XEXYMIX/" class="item-link">
@@ -383,94 +370,7 @@
 
             </div>
         </section>
-
-        <section class="sc-clients" style="display: none;">
-            <div class="inner">
-                <div class="grid-box inner-wrap">
-                    <div class="left">
-                        <div class="sticky-area">
-                            <h3>(My Clients)</h3>
-                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-
-                    </div>
-                    <div class="right">
-                        <div class="txt-area">
-                            <div class="top">
-                                <div class="txt-box first">
-                                    <h4>Exceptional digital design and user experience.</h4>
-                                    <p>Bent's digital design skills are unmatched. He transformed our website into a
-                                        beautiful and functional work of art that exceeded our expectations.</p>
-
-                                    <div class="profile">
-                                        <div class="img"><img
-                                                src="https://assets.website-files.com/64589fb989b2b33c593db89d/645df9b1ddb30689f693619c_author-testimonial-01.webp"
-                                                alt=""></div>
-                                        <div class="name">
-                                            <b>John Smith</b>
-                                            <span>Motion Design</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt-box second">
-                                    <h4>Exceptional digital design and user experience.</h4>
-                                    <p>Bent's digital design skills are unmatched. He transformed our website into a
-                                        beautiful and functional work of art that exceeded our expectations.</p>
-                                    <div class="profile">
-                                        <div class="img"><img
-                                                src="https://assets.website-files.com/64589fb989b2b33c593db89d/645df9b1ddb30689f693619c_author-testimonial-01.webp"
-                                                alt=""></div>
-                                        <div class="name">
-                                            <b>John Smith</b>
-                                            <span>Motion Design</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <div class="txt-box third">
-                                    <h4>Exceptional digital design and user experience.</h4>
-                                    <p>Bent's digital design skills are unmatched. He transformed our website into a
-                                        beautiful and functional work of art that exceeded our expectations.</p>
-
-                                    <div class="profile">
-                                        <div class="img"><img
-                                                src="https://assets.website-files.com/64589fb989b2b33c593db89d/645df9b1ddb30689f693619c_author-testimonial-01.webp"
-                                                alt=""></div>
-                                        <div class="name">
-                                            <b>John Smith</b>
-                                            <span>Motion Design</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="txt-box fourth">
-                                    <h4>Exceptional digital design and user experience.</h4>
-                                    <p>Bent's digital design skills are unmatched. He transformed our website into a
-                                        beautiful and functional work of art that exceeded our expectations.</p>
-                                    <div class="profile">
-                                        <div class="img"><img
-                                                src="https://assets.website-files.com/64589fb989b2b33c593db89d/645df9b1ddb30689f693619c_author-testimonial-01.webp"
-                                                alt=""></div>
-                                        <div class="name">
-                                            <b>John Smith</b>
-                                            <span>Motion Design</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sc-connect">
+        <section id="sc-connect">
             <div class="inner">
                 <div class="inner-wrap">
                     <h3>(Connect)</h3>

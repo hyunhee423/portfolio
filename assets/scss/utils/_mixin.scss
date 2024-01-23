@@ -37,23 +37,22 @@
 }
 $pc:1280px;
 $mobile:767px;
+$tablet:1024px;
 
-// $pc:
-// $tablet:
-// $mobile:
+
 @mixin pc() {
-    /* 노트북 & PC (해상도 1024px)*/
+    /* 노트북 & PC (해상도 1280px)*/
     @media(max-width:$pc) {
         @content;
     }
 }
 
-// @mixin tablet() {
-//     /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-//     @media all and (max-width:1023px) {
-//         @content;
-//     }
-// }
+@mixin tablet() {
+    /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+    @media(max-width:$tablet) {
+        @content;
+    }
+}
 
 @mixin mobile() {
     /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/

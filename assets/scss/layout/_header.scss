@@ -104,6 +104,11 @@
                 font-weight: 600;
                 line-height: 110%;
                 text-decoration: none;
+                @include mobile{
+                    padding: 1rem;
+                    border: none;
+                    line-height: 1;
+                }
 
             }
         }

@@ -21,7 +21,15 @@ introTl
 .to('.landing .landing-overlay',{ height:0,stagger:0.2,})  
 
 
-introTl2 = gsap.from('.sc-main',{opacity:0,paused:true})
+introTl2 = gsap.from('#sc-main',{opacity:0,paused:true})
+
+
+// 스크롤 이동
+$('.scroll').click(function(event){
+  console.log(".scroll");
+  event.preventDefault();
+  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
 
 
 
@@ -52,18 +60,18 @@ $('.nav .btn-close').click(function(){
 
 
 // visual
-gsap.set('.sc-visual .img-area>img',{scale:2, stagger:0.1})
+gsap.set('#sc-visual .img-area>img',{scale:2, stagger:0.1})
 
 descBg = gsap.timeline({
   scrollTrigger: {
-    trigger: '.sc-visual',
+    trigger: '#sc-visual',
     start: "0% 100%",
     end: "100% 0%",
     scrub:0,
   },
   
 })
-descBg.to('.sc-visual .img-area>img',{ scale:1.5 ,stagger:0.1},'a')
+descBg.to('#sc-visual .img-area>img',{ scale:1.5 ,stagger:0.1},'a')
 
 // about
 
@@ -99,20 +107,20 @@ worKmv.to('#About .sc-info .txt',{ xPercent:-30,stagger:0.1},)
 
 descBg = gsap.timeline({
   scrollTrigger: {
-    trigger: '.sc-project',
+    trigger: '#sc-project',
     start: "0% 0%",
     end: "100% 100%",
     scrub:1,
   },
   
 })
-descBg.to('.sc-project .item-link img',{ scale:1.2 ,stagger:0.1},'a')
+descBg.to('#sc-project .item-link img',{ scale:1.2 ,stagger:0.1},'a')
 
 
 
 
 
-$('.sc-project .item').mousemove(function(e){
+$('#sc-project .item').mousemove(function(e){
   xVal = e.offsetX - window.innerWidth/2;
   yVal = e.offsetY - window.innerHeight/2;;
 
@@ -130,15 +138,15 @@ hovMotion = gsap.timeline({
 
 
 hovMotion
-.set('.sc-project .item .btn',{ scale:0,rotation:360})
-.to('.sc-project .item .btn',{ scale:1,rotation:0 })
+.set('#sc-project .item .btn',{ scale:0,rotation:360})
+.to('#sc-project .item .btn',{ scale:1,rotation:0 })
 
-$('.sc-project .item').mouseover(function () {
+$('#sc-project .item').mouseover(function () {
     m1=setTimeout(() => {
       hovMotion.restart();
     }, 100);
 })
 
-$('.sc-project .item .btn').mouseout(function () {
+$('#sc-project .item .btn').mouseout(function () {
   clearTimeout(m1)
 })

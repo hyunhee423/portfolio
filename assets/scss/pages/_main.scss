@@ -1,7 +1,7 @@
 .main-wrap {
     background: #f5f3ef;
 
-    .sc-main {
+    #sc-main {
         .main-title {
             font-size: 9rem;
             letter-spacing: -7px;
@@ -9,6 +9,10 @@
             font-weight: 600;
             line-height: 100%;
             padding-top: 4rem;
+            @include mobile{
+                font-size: 3rem;
+                padding-top: 6rem;
+            }
         }
 
 
@@ -25,6 +29,12 @@
                 font-weight: 600;
                 line-height: 120%;
                 font-size: 2rem;
+                @include tablet{
+                    font-size: 1rem;
+                }
+                @include mobile{
+                    font-size: .8rem;
+                }
             }
 
             .scroll-down {
@@ -42,6 +52,12 @@
                 font-weight: 600;
                 line-height: 120%;
                 overflow: hidden;
+                @include tablet{
+                    font-size: 1rem;
+                }
+                @include mobile{
+                    font-size: .8rem;
+                }
 
                 .icon {
                     width: 40px;
@@ -75,7 +91,7 @@
         }
     }
 
-    .sc-visual {
+    #sc-visual {
         height: 90vh;
         max-height: 75vw;
         position: relative;
@@ -110,6 +126,7 @@
         }
     }
 
+    #About{
     .sc-about {
 
 
@@ -118,6 +135,9 @@
             position: relative;
             overflow: hidden;
             --bar:0;
+            @include mobile{
+                flex-direction: column;
+            }
             &::before{
                 position: absolute;
                 bottom: 0;left: 0;
@@ -125,6 +145,7 @@
                 height: 2px;
                 background: #1e1e21;
                 content: '';
+
             }
            
             h2 {
@@ -136,6 +157,15 @@
                 flex: 1;
                 padding-right: 4rem;
                 position: relative;
+                @include tablet{
+                font-size: 40px;
+                line-height: 1.2;
+                }
+                @include mobile{
+                font-size: 20px;
+                padding-right: 0;
+                padding-bottom: 2rem;
+                }
             }
 
 
@@ -156,6 +186,10 @@
                     width: 2px;
                     height: var(--bar);
                     background: #1e1e21;
+                    @include mobile{
+                        width: 100%;
+                        height: 2px;
+                    }
                 }
 
                 .line-colum {
@@ -213,6 +247,10 @@
             display: flex;
             position: relative;
             --bar:0;
+            @include mobile{
+                flex-direction: column;
+                padding-bottom: 2rem;
+            }
             &::before{
                 position: absolute;
                 bottom: 0;left: 0;
@@ -229,6 +267,13 @@
                 flex: .5;
                 padding-right: 3rem;
                 position: relative;
+                @include tablet{
+                    padding-right: 2rem;
+                }
+                @include mobile{
+                    padding-right: 0;
+                    padding-bottom: 2rem;
+                }
                 &::before{
                     position: absolute;
                     top: 0;right: 0;
@@ -236,7 +281,23 @@
                     height: var(--bar);
                     background: #1e1e21;
                     content: '';
+                    @include mobile{
+                        position: static;
+                    }
                 }
+                &::after{
+                       @include mobile{
+                    position: absolute;
+                    bottom: 0;right: 0;
+                    width:100%;
+                    height:2px;
+                    background: #1e1e21;
+                    content: '';                
+                 
+                    }
+                }
+
+
 
                 .sticky-area {
                     position: sticky;
@@ -272,6 +333,12 @@
                 padding-left: 3rem;
                 position: relative;
                 overflow: hidden;
+                @include tablet{
+                    padding-left: 2rem;
+                }
+                @include mobile{
+                    padding-left: 0;
+                }
 
                 h4 {
                     letter-spacing: -1px;
@@ -280,11 +347,22 @@
                     font-weight: 600;
                     line-height: 110%;
                     margin: 0.5rem 0;
+                    @include tablet{
+                        font-size: 1.8rem;
+                    }
+                    @include mobile{
+                        padding-top: 2rem;
+                    }
                 }
 
                 p {
                     color: rgba(30, 30, 33, .7);
                     font-size: 18px;
+                    @include tablet{
+                        font-size: 1.5rem;
+                        padding-bottom: 2rem;
+                    }
+
                 }
 
                 .txt-area {
@@ -292,6 +370,9 @@
                     flex-direction: column;
                     justify-content: space-between;
                     display: flex;
+                    @include tablet{
+                        grid-column-gap: 2rem;
+                    }
                     .line-colum {
                         left: 0;
                     }
@@ -311,7 +392,19 @@
                             height: var(--bar);
                             background: #1e1e21;
                             content: '';
-                        }        
+                            @include mobile{
+                                width: 100%;
+                                height: 2px;
+                                top: 99%;
+
+                            }
+                        }
+                        @include tablet{
+                            padding-right: 2rem;
+                        }
+                        @include mobile{
+                            padding-right: 0;
+                        }
 
                     }
 
@@ -320,6 +413,12 @@
                         padding-left: 4rem;
                         position: relative;
                         overflow: hidden;
+                        @include tablet{
+                            padding-left: 2rem;
+                        }
+                        @include mobile{
+                            padding-left: 0;
+                        }
 
                     }
 
@@ -335,12 +434,22 @@
                             background: #1e1e21;
                             content: '';
                         }
+                        @include mobile{
+                            flex-direction: column;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
                     }
 
                     .bottom {
                         display: flex;
                         padding-top: 4rem;
                         position: relative;
+                        flex-direction: column;
+                        @include mobile{
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
 
                     }
                 }
@@ -366,30 +475,40 @@
                     font-size: 10rem;
                     font-weight: 600;
                     line-height: 90%;
+                    @include mobile{
+                        font-size: 6rem;
+                    }
                 }
             }
         }
     }
 
-    .sc-project {
+    }
+
+    #sc-project {
         position: relative;
         overflow: hidden;
 
         .list {
             .item {
                 .item-link {
-                    max-height: 1000px;
                     height: 90vh;
                     max-height: 75vw;
                     display: block;
                     position: relative;
                     overflow: hidden;
                     transform: translate(0);
+                    @include tablet{
+                    max-height: 40vh;
+                    }
                     &:hover .btn{
                         opacity: 1;
 
                         img{
                             max-width: 100%;
+                            @include tablet{
+                                max-width: 110%;
+                            }
                         }
                     }
                     
@@ -442,7 +561,11 @@
                     align-items: start;
                     padding: 3rem 4rem;
                     display: grid;
-
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2rem;
+                    }
                     h3 {
                         grid-area: span 1/span 1/span 1/span 1;
                         letter-spacing: -7px;
@@ -450,6 +573,12 @@
                         font-size: 9rem;
                         font-weight: 600;
                         line-height: 100%;
+                        @include tablet{
+                            font-size: 6.5rem;
+                        }
+                        @include mobile{
+                            font-size: 4rem;
+                        }
                     }
                 }
 
@@ -459,11 +588,17 @@
                     align-items: stretch;
                     display: flex;
                     align-self: stretch;
+                    @include tablet{
+                        gap:20px;
+                    }
 
                     p {
                         font-size: 1.25rem;
                         line-height: 160%;
                         color: rgba(30, 30, 33, .7);
+                        @include tablet{
+                            font-size: 1rem;
+                        }
                     }
 
                     .teg-wrap {
@@ -483,6 +618,15 @@
                             color: #fff;
                             background-color: #1e1e21;
                             border-color: transparent;
+                            @include tablet{
+                                padding: 0.5rem;
+                                font-size: 1rem;
+                                
+                            }
+                            @include mobile{
+                                border: none;
+                                font-size: .8rem;
+                            }
                         }
                     }
                 }
@@ -492,153 +636,7 @@
     }
 
 
-    .sc-clients {
-        .grid-box {
-            display: flex;
-            position: relative;
-
-            .left {
-                flex: .5;
-                padding-right: 3rem;
-                position: relative;
-
-                .sticky-area {
-                    position: sticky;
-                    top: 2rem;
-                    display: flex;
-                    grid-column-gap: 1rem;
-                    grid-row-gap: 1rem;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    h3 {
-                        letter-spacing: -.5px;
-                        font-family: Inter, sans-serif;
-                        font-size: 2rem;
-                        font-weight: 600;
-                        line-height: 120%;
-                    }
-
-                    .icon {
-                        svg {
-                            width: 40px;
-                            height: 40px;
-                            line-height: 100%;
-                        }
-                    }
-                }
-
-            }
-
-            .right {
-                flex: 1;
-                padding-left: 3rem;
-
-                h4 {
-                    letter-spacing: -1px;
-                    font-family: Inter, sans-serif;
-                    font-size: 2.75rem;
-                    font-weight: 600;
-                    line-height: 110%;
-                    margin: 0.5rem;
-                }
-
-                p {
-                    color: rgba(30, 30, 33, .7);
-                    font-size: 18px;
-                }
-
-                .txt-area {
-                    grid-column-gap: 4rem;
-                    grid-row-gap: 4rem;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    display: flex;
-                    overflow: hidden;
-
-                    .txt-box {
-                        flex: 1;
-                        overflow: hidden;
-
-                        p {
-                            margin: 1rem 0;
-                        }
-
-                        .profile {
-                            grid-column-gap: 1rem;
-                            grid-row-gap: 1rem;
-                            grid-template-rows: auto;
-                            grid-template-columns: auto 1fr;
-                            grid-auto-columns: 1fr;
-                            align-items: center;
-                            display: grid;
-
-                            .img {
-                                border-radius: 50%;
-                                overflow: hidden;
-                                width: 60px;
-                                height: 60px;
-
-                                img {
-                                    max-width: 100%;
-                                    display: inline-block;
-                                }
-
-                            }
-
-                            .name {
-                                display: flex;
-                                flex-direction: column;
-
-                                b {
-                                    font-family: Inter, sans-serif;
-                                    font-size: 1.125rem;
-                                    font-weight: 600;
-                                    line-height: 140%;
-                                }
-
-                                span {
-                                    color: rgba(30, 30, 33, .7);
-                                }
-                            }
-                        }
-                    }
-
-                    .txt-box.first,
-                    .txt-box.third {
-                        padding-right: 4rem;
-                        position: relative;
-
-                    }
-
-                    .txt-box.second,
-                    .txt-box.fourth {
-                        padding-left: 4rem;
-
-                    }
-
-                    .top {
-                        display: flex;
-                        position: relative;
-                        padding-bottom: 4rem;
-
-                    }
-
-                    .bottom {
-                        display: flex;
-                        position: relative;
-
-                        .line-row {
-                            top: -4rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .sc-connect {
+    #sc-connect {
         color: #f5f3ef;
         text-align: center;
         background-color: #1e1e21;
@@ -649,6 +647,9 @@
             font-size: 2rem;
             font-weight: 600;
             line-height: 120%;
+            @include mobile{
+                font-size: 1.8rem;
+            }
         }
 
         .txt {
@@ -658,6 +659,10 @@
             font-weight: 600;
             line-height: 100%;
             margin: 3rem;
+            @include mobile{
+                font-size: 5rem;
+                margin: 2rem;
+            }
         }
 
     }

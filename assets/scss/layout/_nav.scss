@@ -135,10 +135,17 @@
                 font-weight: 600;
                 overflow: hidden;
                 transform: translateY(100%);
+                @include mobile{
+                    font-size: 5rem;
+                }
                 
 
                 &:hover .menu-txt {
                     transform: translateY(-8rem);
+                    @include mobile{
+                    transform: translateY(-5rem);
+
+                    }
                 }
 
                 .icon {
@@ -154,6 +161,9 @@
                     flex-direction: column;
                     height: 8rem;
                     transition: all .4s;
+                    @include mobile{
+                        height: 5rem;
+                    }
 
                     span {
                         line-height: 1;
