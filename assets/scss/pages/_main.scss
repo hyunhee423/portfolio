@@ -387,6 +387,10 @@
                     transform: translate(0);
                     &:hover .btn{
                         opacity: 1;
+
+                        img{
+                            max-width: 100%;
+                        }
                     }
                     
                     .btn {

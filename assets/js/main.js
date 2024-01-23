@@ -95,7 +95,7 @@ worKmv = gsap.timeline({
 worKmv.to('#About .sc-info .txt',{ xPercent:-30,stagger:0.1},)
 
 // projects
-gsap.set('.sc-project .item-link img',{scale:1.5, stagger:0.1})
+// gsap.set('.sc-project .item-link img',{scale:.9, stagger:0.1})
 
 descBg = gsap.timeline({
   scrollTrigger: {
@@ -106,7 +106,7 @@ descBg = gsap.timeline({
   },
   
 })
-descBg.to('.sc-project .item-link img',{ scale:2 ,stagger:0.1},'a')
+descBg.to('.sc-project .item-link img',{ scale:1.2 ,stagger:0.1},'a')
 
 
 
