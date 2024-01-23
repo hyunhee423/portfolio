@@ -758,6 +758,8 @@ body {
   .main-wrap #sc-main .main-title {
     font-size: 3rem;
     padding-top: 6rem;
+    text-align: cetner;
+    letter-spacing: -3px;
   }
 }
 .main-wrap #sc-main .bottom {
@@ -939,6 +941,7 @@ body {
     font-size: 20px;
     padding-right: 0;
     padding-bottom: 2rem;
+    letter-spacing: 1;
   }
 }
 .main-wrap #About .sc-about .gird-box .cont-box {
