@@ -508,6 +508,7 @@
                         opacity: 1;
 
                         img{
+                            object-fit: cover;
                             max-width: 100%;
                             @include tablet{
                                 max-width: 110%;
