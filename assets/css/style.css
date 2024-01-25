@@ -896,7 +896,7 @@ body {
   display: flex;
   position: relative;
   overflow: hidden;
-  --bar:0;
+  --bar: 0;
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 }
 @media (max-width: 767px) {
@@ -964,7 +964,7 @@ body {
   padding-left: 4rem;
   position: relative;
   overflow: hidden;
-  --bar:0;
+  --bar: 0;
 }
 .main-wrap #About .sc-about .gird-box .cont-box::before {
   position: absolute;
@@ -1039,7 +1039,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  --bar:0;
+  --bar: 0;
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 }
 @media (max-width: 767px) {
@@ -1377,13 +1377,32 @@ body {
 .main-wrap #sc-project .list .item .item-link:hover .btn {
   opacity: 1;
 }
-.main-wrap #sc-project .list .item .item-link:hover .btn img {
+.main-wrap #sc-project .list .item .item-link img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 }
 @media (max-width: 1024px) {
-  .main-wrap #sc-project .list .item .item-link:hover .btn img {
+  .main-wrap #sc-project .list .item .item-link img {
     max-width: 110%;
+  }
+}
+.main-wrap #sc-project .list .item .item-link .pc-img {
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media (max-width: 767px) {
+  .main-wrap #sc-project .list .item .item-link .pc-img {
+    display: none !important;
+  }
+}
+.main-wrap #sc-project .list .item .item-link .mob-img {
+  display: none;
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+}
+@media (max-width: 767px) {
+  .main-wrap #sc-project .list .item .item-link .mob-img {
+    display: block;
   }
 }
 .main-wrap #sc-project .list .item .item-link .btn {

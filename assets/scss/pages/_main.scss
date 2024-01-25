@@ -9,7 +9,8 @@
             font-weight: 600;
             line-height: 100%;
             padding-top: 4rem;
-            @include mobile{
+
+            @include mobile {
                 font-size: 3rem;
                 padding-top: 6rem;
                 text-align: cetner;
@@ -31,10 +32,12 @@
                 font-weight: 600;
                 line-height: 120%;
                 font-size: 2rem;
-                @include tablet{
+
+                @include tablet {
                     font-size: 1rem;
                 }
-                @include mobile{
+
+                @include mobile {
                     font-size: .8rem;
                 }
             }
@@ -54,10 +57,12 @@
                 font-weight: 600;
                 line-height: 120%;
                 overflow: hidden;
-                @include tablet{
+
+                @include tablet {
                     font-size: 1rem;
                 }
-                @include mobile{
+
+                @include mobile {
                     font-size: .8rem;
                 }
 
@@ -65,26 +70,31 @@
                     width: 40px;
                     height: 40px;
                     line-height: 100%;
-                 
-                    position: relative;
-                    .after{
 
-                           transition: transform .2s;
+                    position: relative;
+
+                    .after {
+
+                        transition: transform .2s;
                     }
-                    .before{
+
+                    .before {
                         position: absolute;
-                           transition: transform .2s;
-                        top: 0;left: 0;
+                        transition: transform .2s;
+                        top: 0;
+                        left: 0;
                         transform: translate(-100%, -100%);
                     }
                 }
-                &:hover{
+
+                &:hover {
                     .icon {
-                        .after{
+                        .after {
                             transform: translate(100%, 100%);
                         }
-                        .before{
-                           
+
+                        .before {
+
                             transform: translate(0%, 0%);
                         }
                     }
@@ -128,363 +138,402 @@
         }
     }
 
-    #About{
-    .sc-about {
+    #About {
+        .sc-about {
 
 
-        .gird-box {
-            display: flex;
-            position: relative;
-            overflow: hidden;
-            --bar:0;
-            @include mobile{
-                flex-direction: column;
-            }
-            &::before{
-                position: absolute;
-                bottom: 0;left: 0;
-                width:var(--bar);
-                height: 2px;
-                background: #1e1e21;
-                content: '';
-
-            }
-           
-            h2 {
-                letter-spacing: -2px;
-                font-family: Inter, sans-serif;
-                font-size: 5.5rem;
-                font-weight: 600;
-                line-height: 100%;
-                flex: 1;
-                padding-right: 4rem;
-                position: relative;
-                @include tablet{
-                font-size: 40px;
-                line-height: 1.2;
-                }
-                @include mobile{
-                font-size: 20px;
-                padding-right: 0;
-                padding-bottom: 2rem;
-                letter-spacing: 1;
-                }
-            }
-
-
-            .cont-box {
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: stretch;
+            .gird-box {
                 display: flex;
-                flex: .5;
-                padding-left: 4rem;
                 position: relative;
                 overflow: hidden;
-                --bar:0;
-                &::before{
+                --bar: 0;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                &::before {
                     position: absolute;
-                    content: '';
-                    top: 0;left: 0;
-                    width: 2px;
-                    height: var(--bar);
-                    background: #1e1e21;
-                    @include mobile{
-                        width: 100%;
-                        height: 2px;
-                    }
-                }
-
-                .line-colum {
-                    top: 0;
+                    bottom: 0;
                     left: 0;
+                    width: var(--bar);
+                    height: 2px;
+                    background: #1e1e21;
+                    content: '';
+
                 }
 
-                .title {
+                h2 {
+                    letter-spacing: -2px;
+                    font-family: Inter, sans-serif;
+                    font-size: 5.5rem;
+                    font-weight: 600;
+                    line-height: 100%;
                     flex: 1;
+                    padding-right: 4rem;
+                    position: relative;
 
-                    h3 {
-                        letter-spacing: -.5px;
-                        font-family: Inter, sans-serif;
-                        font-size: 2rem;
-                        font-weight: 600;
-                        line-height: 120%;
-                        margin: 1rem;
+                    @include tablet {
+                        font-size: 40px;
+                        line-height: 1.2;
+                    }
+
+                    @include mobile {
+                        font-size: 20px;
+                        padding-right: 0;
+                        padding-bottom: 2rem;
+                        letter-spacing: 1;
                     }
                 }
 
 
-                .icon-box {
-                    grid-column-gap: 1rem;
-                    grid-row-gap: 1rem;
-                    align-items: flex-start;
-                    list-style-type: none;
+                .cont-box {
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: stretch;
                     display: flex;
+                    flex: .5;
+                    padding-left: 4rem;
+                    position: relative;
+                    overflow: hidden;
+                    --bar: 0;
 
-                    a {
-                        width: 48px;
-                        height: 48px;
-                        backdrop-filter: none;
-                        color: #fff;
-                        background-color: #1e1e21;
-                        border-color: transparent;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 2px;
+                        height: var(--bar);
+                        background: #1e1e21;
+
+                        @include mobile {
+                            width: 100%;
+                            height: 2px;
+                        }
+                    }
+
+                    .line-colum {
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .title {
+                        flex: 1;
+
+                        h3 {
+                            letter-spacing: -.5px;
+                            font-family: Inter, sans-serif;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            line-height: 120%;
+                            margin: 1rem;
+                        }
+                    }
+
+
+                    .icon-box {
+                        grid-column-gap: 1rem;
+                        grid-row-gap: 1rem;
+                        align-items: flex-start;
+                        list-style-type: none;
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50%;
 
-                        svg {
-                            width: 24px;
-                            height: 24px;
-                            line-height: 100%;
+                        a {
+                            width: 48px;
+                            height: 48px;
+                            backdrop-filter: none;
+                            color: #fff;
+                            background-color: #1e1e21;
+                            border-color: transparent;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+
+                            svg {
+                                width: 24px;
+                                height: 24px;
+                                line-height: 100%;
+                            }
                         }
                     }
                 }
             }
+
         }
 
-    }
-
-    .sc-skill {
-        .grid-box {
-            display: flex;
-            position: relative;
-            --bar:0;
-            @include mobile{
-                flex-direction: column;
-                padding-bottom: 2rem;
-            }
-            &::before{
-                position: absolute;
-                bottom: 0;left: 0;
-                width:var(--bar);
-                height: 2px;
-                background: #1e1e21;
-                content: '';
-            }
-
-            .line-row {
-                bottom: 0;
-            }
-            .left {
-                flex: .5;
-                padding-right: 3rem;
+        .sc-skill {
+            .grid-box {
+                display: flex;
                 position: relative;
-                @include tablet{
-                    padding-right: 2rem;
-                }
-                @include mobile{
-                    padding-right: 0;
+                --bar: 0;
+
+                @include mobile {
+                    flex-direction: column;
                     padding-bottom: 2rem;
                 }
-                &::before{
+
+                &::before {
                     position: absolute;
-                    top: 0;right: 0;
-                    width:2px;
-                    height: var(--bar);
+                    bottom: 0;
+                    left: 0;
+                    width: var(--bar);
+                    height: 2px;
                     background: #1e1e21;
                     content: '';
-                    @include mobile{
-                        position: static;
-                    }
-                }
-                &::after{
-                       @include mobile{
-                    position: absolute;
-                    bottom: 0;right: 0;
-                    width:100%;
-                    height:2px;
-                    background: #1e1e21;
-                    content: '';                
-                 
-                    }
                 }
 
-
-
-                .sticky-area {
-                    position: sticky;
-                    top: 2rem;
-                    display: flex;
-                    grid-column-gap: 1rem;
-                    grid-row-gap: 1rem;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    h3 {
-                        letter-spacing: -.5px;
-                        font-family: Inter, sans-serif;
-                        font-size: 2rem;
-                        font-weight: 600;
-                        line-height: 120%;
-                    }
-
-                    .icon {
-                        svg {
-                            width: 40px;
-                            height: 40px;
-                            line-height: 100%;
-                        }
-                    }
+                .line-row {
+                    bottom: 0;
                 }
 
-            }
+                .left {
+                    flex: .5;
+                    padding-right: 3rem;
+                    position: relative;
 
-            .right {
-                flex: 1;
-                padding-left: 3rem;
-                position: relative;
-                overflow: hidden;
-                @include tablet{
-                    padding-left: 2rem;
-                }
-                @include mobile{
-                    padding-left: 0;
-                }
-
-                h4 {
-                    letter-spacing: -1px;
-                    font-family: Inter, sans-serif;
-                    font-size: 2.75rem;
-                    font-weight: 600;
-                    line-height: 110%;
-                    margin: 0.5rem 0;
-                    @include tablet{
-                        font-size: 1.8rem;
+                    @include tablet {
+                        padding-right: 2rem;
                     }
-                    @include mobile{
-                        padding-top: 2rem;
-                    }
-                }
 
-                p {
-                    color: rgba(30, 30, 33, .7);
-                    font-size: 18px;
-                    @include tablet{
-                        font-size: 1.5rem;
+                    @include mobile {
+                        padding-right: 0;
                         padding-bottom: 2rem;
                     }
 
-                }
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 2px;
+                        height: var(--bar);
+                        background: #1e1e21;
+                        content: '';
 
-                .txt-area {
-                    grid-column-gap: 4rem;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    display: flex;
-                    @include tablet{
-                        grid-column-gap: 2rem;
-                    }
-                    .line-colum {
-                        left: 0;
-                    }
-                    .txt-box {
-                        flex: 1;
+                        @include mobile {
+                            position: static;
+                        }
                     }
 
-                    .txt-box.first,
-                    .txt-box.third {
-                        padding-right: 4rem;
-                        position: relative;
-                        overflow: hidden;
-                        &::before{
+                    &::after {
+                        @include mobile {
                             position: absolute;
-                            top: 0;right: 0;
-                            width:2px;
-                            height: var(--bar);
-                            background: #1e1e21;
-                            content: '';
-                            @include mobile{
-                                width: 100%;
-                                height: 2px;
-                                top: 99%;
-
-                            }
-                        }
-                        @include tablet{
-                            padding-right: 2rem;
-                        }
-                        @include mobile{
-                            padding-right: 0;
-                        }
-
-                    }
-
-                    .txt-box.second,
-                    .txt-box.fourth {
-                        padding-left: 4rem;
-                        position: relative;
-                        overflow: hidden;
-                        @include tablet{
-                            padding-left: 2rem;
-                        }
-                        @include mobile{
-                            padding-left: 0;
-                        }
-
-                    }
-
-                    .top {
-                        display: flex;
-                        position: relative;
-                        padding-bottom: 4rem;
-                        &::before{
-                            position: absolute;
-                            bottom: 0;left: 0;
-                            width:var(--bar);
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
                             height: 2px;
                             background: #1e1e21;
                             content: '';
-                        }
-                        @include mobile{
-                            flex-direction: column;
-                            padding-top: 0;
-                            padding-bottom: 0;
+
                         }
                     }
 
-                    .bottom {
+
+
+                    .sticky-area {
+                        position: sticky;
+                        top: 2rem;
                         display: flex;
-                        padding-top: 4rem;
-                        position: relative;
-                        @include mobile{
-                            flex-direction: column;
-                            padding-top: 0;
-                            padding-bottom: 0;
+                        grid-column-gap: 1rem;
+                        grid-row-gap: 1rem;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h3 {
+                            letter-spacing: -.5px;
+                            font-family: Inter, sans-serif;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            line-height: 120%;
+                        }
+
+                        .icon {
+                            svg {
+                                width: 40px;
+                                height: 40px;
+                                line-height: 100%;
+                            }
+                        }
+                    }
+
+                }
+
+                .right {
+                    flex: 1;
+                    padding-left: 3rem;
+                    position: relative;
+                    overflow: hidden;
+
+                    @include tablet {
+                        padding-left: 2rem;
+                    }
+
+                    @include mobile {
+                        padding-left: 0;
+                    }
+
+                    h4 {
+                        letter-spacing: -1px;
+                        font-family: Inter, sans-serif;
+                        font-size: 2.75rem;
+                        font-weight: 600;
+                        line-height: 110%;
+                        margin: 0.5rem 0;
+
+                        @include tablet {
+                            font-size: 1.8rem;
+                        }
+
+                        @include mobile {
+                            padding-top: 2rem;
+                        }
+                    }
+
+                    p {
+                        color: rgba(30, 30, 33, .7);
+                        font-size: 18px;
+
+                        @include tablet {
+                            font-size: 1.5rem;
+                            padding-bottom: 2rem;
                         }
 
                     }
-                }
-            }
-        }
-    }
 
-    .sc-info {
-        .wrap {
-            padding: 3rem 0;
-            overflow: hidden;
+                    .txt-area {
+                        grid-column-gap: 4rem;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        display: flex;
 
-            .txt {
-                grid-column-gap: 2rem;
-                grid-row-gap: 2rem;
-                justify-content: center;
-                align-items: center;
-                display: flex;
+                        @include tablet {
+                            grid-column-gap: 2rem;
+                        }
 
-                .word {
-                    letter-spacing: -7px;
-                    font-family: Inter, sans-serif;
-                    font-size: 10rem;
-                    font-weight: 600;
-                    line-height: 90%;
-                    @include mobile{
-                        font-size: 6rem;
+                        .line-colum {
+                            left: 0;
+                        }
+
+                        .txt-box {
+                            flex: 1;
+                        }
+
+                        .txt-box.first,
+                        .txt-box.third {
+                            padding-right: 4rem;
+                            position: relative;
+                            overflow: hidden;
+
+                            &::before {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 2px;
+                                height: var(--bar);
+                                background: #1e1e21;
+                                content: '';
+
+                                @include mobile {
+                                    width: 100%;
+                                    height: 2px;
+                                    top: 99%;
+
+                                }
+                            }
+
+                            @include tablet {
+                                padding-right: 2rem;
+                            }
+
+                            @include mobile {
+                                padding-right: 0;
+                            }
+
+                        }
+
+                        .txt-box.second,
+                        .txt-box.fourth {
+                            padding-left: 4rem;
+                            position: relative;
+                            overflow: hidden;
+
+                            @include tablet {
+                                padding-left: 2rem;
+                            }
+
+                            @include mobile {
+                                padding-left: 0;
+                            }
+
+                        }
+
+                        .top {
+                            display: flex;
+                            position: relative;
+                            padding-bottom: 4rem;
+
+                            &::before {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: var(--bar);
+                                height: 2px;
+                                background: #1e1e21;
+                                content: '';
+                            }
+
+                            @include mobile {
+                                flex-direction: column;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            padding-top: 4rem;
+                            position: relative;
+
+                            @include mobile {
+                                flex-direction: column;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+
+                        }
                     }
                 }
             }
         }
-    }
+
+        .sc-info {
+            .wrap {
+                padding: 3rem 0;
+                overflow: hidden;
+
+                .txt {
+                    grid-column-gap: 2rem;
+                    grid-row-gap: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+
+                    .word {
+                        letter-spacing: -7px;
+                        font-family: Inter, sans-serif;
+                        font-size: 10rem;
+                        font-weight: 600;
+                        line-height: 90%;
+
+                        @include mobile {
+                            font-size: 6rem;
+                        }
+                    }
+                }
+            }
+        }
 
     }
 
@@ -501,21 +550,38 @@
                     position: relative;
                     overflow: hidden;
                     transform: translate(0);
-                    @include tablet{
-                    max-height: 40vh;
-                    }
-                    &:hover .btn{
-                        opacity: 1;
 
-                        img{
-                            object-fit: cover;
-                            max-width: 100%;
-                            @include tablet{
-                                max-width: 110%;
-                            }
+                    @include tablet {
+                        max-height: 40vh;
+                    }
+
+                    &:hover .btn {
+                        opacity: 1;
+                    }
+
+                    img {
+                        object-fit: cover;
+                        max-width: 100%;
+
+                        @include tablet {
+                            max-width: 110%;
                         }
                     }
-                    
+
+                    .pc-img {
+                        @include mobile {
+                            display: none !important;
+                        }
+                    }
+
+                    .mob-img {
+                        display: none;
+
+                        @include mobile {
+                            display: block;
+                        }
+                    }
+
                     .btn {
                         position: absolute;
                         z-index: 10;
@@ -565,11 +631,13 @@
                     align-items: start;
                     padding: 3rem 4rem;
                     display: grid;
-                    @include mobile{
+
+                    @include mobile {
                         display: flex;
                         flex-direction: column;
                         padding: 2rem;
                     }
+
                     h3 {
                         grid-area: span 1/span 1/span 1/span 1;
                         letter-spacing: -7px;
@@ -577,10 +645,12 @@
                         font-size: 9rem;
                         font-weight: 600;
                         line-height: 100%;
-                        @include tablet{
+
+                        @include tablet {
                             font-size: 6.5rem;
                         }
-                        @include mobile{
+
+                        @include mobile {
                             font-size: 4rem;
                         }
                     }
@@ -592,15 +662,17 @@
                     align-items: stretch;
                     display: flex;
                     align-self: stretch;
-                    @include tablet{
-                        gap:20px;
+
+                    @include tablet {
+                        gap: 20px;
                     }
 
                     p {
                         font-size: 1.25rem;
                         line-height: 160%;
                         color: rgba(30, 30, 33, .7);
-                        @include tablet{
+
+                        @include tablet {
                             font-size: 1rem;
                         }
                     }
@@ -622,12 +694,14 @@
                             color: #fff;
                             background-color: #1e1e21;
                             border-color: transparent;
-                            @include tablet{
+
+                            @include tablet {
                                 padding: 0.5rem;
                                 font-size: 1rem;
-                                
+
                             }
-                            @include mobile{
+
+                            @include mobile {
                                 border: none;
                                 font-size: .8rem;
                             }
@@ -651,7 +725,8 @@
             font-size: 2rem;
             font-weight: 600;
             line-height: 120%;
-            @include mobile{
+
+            @include mobile {
                 font-size: 1.8rem;
             }
         }
@@ -663,7 +738,8 @@
             font-weight: 600;
             line-height: 100%;
             margin: 3rem;
-            @include mobile{
+
+            @include mobile {
                 font-size: 5rem;
                 margin: 2rem;
             }
